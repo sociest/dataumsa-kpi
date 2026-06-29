@@ -20,7 +20,7 @@ jobs:
       id-token: write
       packages: write
     env:
-       CI_REGISTRY_IMAGE: ghcr.io/kobotoolbox/kpi
+       CI_REGISTRY_IMAGE: ghcr.io/sociest/dataumsa-kpi
     outputs:
       kpi_image_sha: ${{ steps.sha.outputs.sha }}
     steps:
@@ -86,14 +86,14 @@ jobs:
         with:
           client-id: ${{ secrets.KOBO_BOT_CLIENT_ID }}
           private-key: ${{ secrets.KOBO_BOT_PRIVATE_KEY }}
-          owner: kobotoolbox
+          owner: sociest
           repositories: "devops"
           
       - name: Trigger kfmain deploy build
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: deploy-kfmain.yml
-          repo: kobotoolbox/devops
+          repo: sociest/devops
           ref: instance/kfmain
           token: ${{ steps.app-token.outputs.token }}
           inputs: |
