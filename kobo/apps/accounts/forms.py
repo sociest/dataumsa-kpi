@@ -36,10 +36,29 @@ CONFIGURABLE_METADATA_FIELDS = (
 
 class LoginForm(BaseLoginForm):
     def __init__(self, *args, **kwargs):
+        self.request = kwargs.get('request')
         super().__init__(*args, **kwargs)
         self.fields['login'].widget.attrs['placeholder'] = ' '
         self.fields['password'].widget.attrs['placeholder'] = ' '
         self.label_suffix = ''
+
+    def clean(self):
+        if constance.config.TURNSTILE_ENABLED:
+            token = self.data.get('cf-turnstile-response')
+            remote_ip = None
+            if self.request:
+                x_forwarded_for = self.request.META.get('HTTP_X_FORWARDED_FOR')
+                if x_forwarded_for:
+                    remote_ip = x_forwarded_for.split(',')[0].strip()
+                else:
+                    remote_ip = self.request.META.get('REMOTE_ADDR')
+
+            from .utils import validate_turnstile
+            if not validate_turnstile(token, remote_ip=remote_ip):
+                raise forms.ValidationError(
+                    t('Invalid or missing security verification (Turnstile). Please try again.')
+                )
+        return super().clean()
 
 
 class ResetPasswordForm(BaseResetPasswordForm):
@@ -127,6 +146,7 @@ class KoboSignupMixin(forms.Form):
     )
 
     def __init__(self, *args, **kwargs):
+        self.request = kwargs.get('request')
         super().__init__(*args, **kwargs)
         self.label_suffix = ''
 
@@ -321,6 +341,22 @@ class SignupForm(KoboSignupMixin, BaseSignupForm):
         """
         Override parent form to pass extra user's attributes to validation.
         """
+        if constance.config.TURNSTILE_ENABLED:
+            token = self.data.get('cf-turnstile-response')
+            remote_ip = None
+            if self.request:
+                x_forwarded_for = self.request.META.get('HTTP_X_FORWARDED_FOR')
+                if x_forwarded_for:
+                    remote_ip = x_forwarded_for.split(',')[0].strip()
+                else:
+                    remote_ip = self.request.META.get('REMOTE_ADDR')
+
+            from .utils import validate_turnstile
+            if not validate_turnstile(token, remote_ip=remote_ip):
+                raise forms.ValidationError(
+                    t('Invalid or missing security verification (Turnstile). Please try again.')
+                )
+
         super(SignupForm, self).clean()
 
         User = get_user_model()  # noqa

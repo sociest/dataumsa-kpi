@@ -233,6 +233,18 @@ CONSTANCE_CONFIG = {
         env.str('KOBO_SUPPORT_URL', 'https://support.kobotoolbox.org/'),
         'URL for "KoboToolbox Help Center"',
     ),
+    'TURNSTILE_ENABLED': (
+        env.bool('TURNSTILE_ENABLED', False),
+        'Enable Cloudflare Turnstile to prevent bot spam on login and registration',
+    ),
+    'TURNSTILE_SITE_KEY': (
+        env.str('TURNSTILE_SITE_KEY', ''),
+        'Cloudflare Turnstile site key',
+    ),
+    'TURNSTILE_SECRET_KEY': (
+        env.str('TURNSTILE_SECRET_KEY', ''),
+        'Cloudflare Turnstile secret key',
+    ),
     'ACADEMY_URL': (
         env.str('KOBO_ACADEMY_URL', 'https://academy.kobotoolbox.org/'),
         'URL for "KoboToolbox Community Forum"',
@@ -750,6 +762,9 @@ CONSTANCE_CONFIG_FIELDSETS = {
         'MFA_ENABLED',
         'MFA_LOCALIZED_HELP_TEXT',
         'SUPERUSER_AUTH_ENFORCEMENT',
+        'TURNSTILE_ENABLED',
+        'TURNSTILE_SITE_KEY',
+        'TURNSTILE_SECRET_KEY',
     ),
     'Metadata options': (
         'USER_METADATA_FIELDS',
