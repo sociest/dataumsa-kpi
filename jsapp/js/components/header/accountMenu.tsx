@@ -1,4 +1,4 @@
-import { IconLogout, IconWorldFilled } from '@tabler/icons-react'
+import { IconLogout, IconWorldFilled, IconInfoCircle } from '@tabler/icons-react'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ACCOUNT_ROUTES } from '#/account/routes.constants'
@@ -126,6 +126,12 @@ export default function AccountMenu() {
                 )}
               </bem.AccountBox__menuLI>
             )}
+
+            <bem.AccountBox__menuLI m={'about'} key='about'>
+              <ButtonNew leftIcon={IconInfoCircle} variant='transparent' onClick={() => window.location.href = '/about/'}>
+                {t('About DataUMSA')}
+              </ButtonNew>
+            </bem.AccountBox__menuLI>
 
             <bem.AccountBox__menuLI m={'lang'} key='3'>
               <ButtonNew leftIcon={IconWorldFilled} variant='transparent' onClick={toggleLanguageSelector} tabIndex={0}>

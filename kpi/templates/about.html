@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+  <div class="registration registration--login" style="max-width: 800px; text-align: left; padding: 2em;">
+    <h1>
+      {% trans 'Acerca de DataUMSA' %}
+    </h1>
+
+    <p style="margin-bottom: 1em; font-size: 1.1em; line-height: 1.6;">
+      DataUMSA es la plataforma institucional de la Universidad Mayor de San Andrés diseñada para la creación de encuestas, censos y recolección de datos de forma segura.
+    </p>
+    
+    <hr style="margin: 2em 0; border: 0; border-top: 1px solid #eee;" />
+
+    <h2>{% trans 'Créditos y Licencias de Código Abierto' %}</h2>
+    
+    <p style="margin-bottom: 1.5em; color: #555;">
+      El desarrollo y la escalabilidad de DataUMSA no serían posibles sin el apoyo del ecosistema de software libre y de código abierto. Reconocemos y damos crédito a las siguientes tecnologías subyacentes:
+    </p>
+
+    <div style="margin-bottom: 1.5em; background: #f9f9f9; padding: 1.5em; border-radius: 8px;">
+      <h3 style="margin-top: 0; color: #005A9C;">KoboToolbox</h3>
+      <p style="margin-bottom: 0.5em;">
+        Esta plataforma está basada en <strong>KoboToolbox</strong>, una suite de herramientas excepcionales para la recolección de datos en el campo.
+      </p>
+      <p style="font-size: 0.9em; color: #666; margin-bottom: 0;">
+        <strong>Licencia:</strong> GNU Affero General Public License (AGPL) v3. <br/>
+        <a href="https://github.com/kobotoolbox/kpi" target="_blank" rel="noopener noreferrer">Repositorio Oficial</a> | <a href="https://www.kobotoolbox.org/" target="_blank" rel="noopener noreferrer">Sitio Web</a>
+      </p>
+    </div>
+
+    <div style="margin-bottom: 1.5em; background: #f9f9f9; padding: 1.5em; border-radius: 8px;">
+      <h3 style="margin-top: 0; color: #005A9C;">Enketo</h3>
+      <p style="margin-bottom: 0.5em;">
+        Utilizamos <strong>Enketo</strong> como motor principal para renderizar formularios inteligentes y responsivos en la web.
+      </p>
+      <p style="font-size: 0.9em; color: #666; margin-bottom: 0;">
+        <strong>Licencia:</strong> Apache License 2.0. <br/>
+        <a href="https://github.com/enketo/enketo-express" target="_blank" rel="noopener noreferrer">Repositorio Oficial</a> | <a href="https://enketo.org/" target="_blank" rel="noopener noreferrer">Sitio Web</a>
+      </p>
+    </div>
+
+    <div style="margin-bottom: 2em; background: #f9f9f9; padding: 1.5em; border-radius: 8px;">
+      <h3 style="margin-top: 0; color: #005A9C;">Django & React</h3>
+      <p style="margin-bottom: 0.5em;">
+        Infraestructura construida sobre el framework web Django (Python) y React (JavaScript) para la interfaz de usuario.
+      </p>
+      <p style="font-size: 0.9em; color: #666; margin-bottom: 0;">
+        <strong>Licencia:</strong> BSD License / MIT License.
+      </p>
+    </div>
+
+    <a href="/" class="kobo-button kobo-button--sso kobo-button--fullwidth" style="display: block; text-align: center; text-decoration: none;">
+      {% trans 'Ir al Inicio' %}
+    </a>
+  </div>
+{% endblock %}

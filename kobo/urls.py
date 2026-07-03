@@ -4,7 +4,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.urls import include, path, re_path
-from django.views.generic.base import RedirectView
+from django.views.generic.base import RedirectView, TemplateView
 from drf_spectacular.views import SpectacularAPIView
 from rest_framework import status
 from rest_framework.exceptions import server_error
@@ -101,6 +101,7 @@ urlpatterns = [
     path('markdownx/', include('markdownx.urls')),
     path('markdownx-uploader/', include('kobo.apps.markdownx_uploader.urls')),
     path('help/', include('kobo.apps.help.urls')),
+    path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
 ]
 
 if settings.ENABLE_METRICS:
