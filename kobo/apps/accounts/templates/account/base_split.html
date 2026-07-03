@@ -37,8 +37,8 @@
         {% endblock %}
       </div>
 
-      {# Contenido dinámico (Formulario o Mensajes de estado) #} {% block
-      content %}{% endblock %}
+{# Contenido dinámico (Formulario o Mensajes de estado) #}
+      {% block content %}{% endblock %}
     </div>
   </div>
 
@@ -67,33 +67,44 @@
       </div>
 
       <h2>
-        {% if LANGUAGE_CODE == 'es' %} Recolecta con confianza. Analiza con
-        poder. {% else %} Collect with confidence. Analyze with power. {% endif
-        %}
+        {% if LANGUAGE_CODE == 'es' %}
+        Recolecta con confianza. Analiza con poder.
+        {% else %}
+        Collect with confidence. Analyze with power.
+        {% endif %}
       </h2>
       <p>
-        {% if LANGUAGE_CODE == 'es' %} La plataforma de recolección de datos de
-        la Universidad Mayor de San Andrés.<br />Más potente para flujos de
-        datos complejos y su validación en tiempo real. {% else %} UMSA's data
-        collection platform. {% endif %}
+        {% if LANGUAGE_CODE == 'es' %}
+        La plataforma de recolección de datos de la Universidad Mayor de San Andrés.<br />
+        Más potente para flujos de datos complejos y su validación en tiempo real.
+        {% else %}
+        UMSA's data collection platform.
+        {% endif %}
       </p>
 
       <div class="stats-badge">
-        {% if LANGUAGE_CODE == 'es' %} Precisión • Innovación • Academia {% else
-        %} Precision • Innovation • Academia {% endif %}
+        {% if LANGUAGE_CODE == 'es' %}
+        Precisión • Innovación • Academia
+        {% else %}
+        Precision • Innovation • Academia
+        {% endif %}
       </div>
       {% endblock %}
     </div>
   </div>
 </div>
 
-{# Scripts de desarrollo/livereload y Google Analytics #} {% if
-livereload_address %}
+{# Scripts de desarrollo/livereload y Google Analytics #}
+{% if livereload_address %}
 <script src="{{livereload_address}}"></script>
-{% endif %} {% block extra_javascript %}{% endblock %} {% if
-google_analytics_token %}
+{% endif %}
+
+{% block extra_javascript %}{% endblock %}
+
+{% if google_analytics_token %}
 <script
   async
   src="https://www.googletagmanager.com/gtag/js?id={{google_analytics_token}}"
 ></script>
-{% endif %} {% endblock %}
+{% endif %}
+{% endblock %}
