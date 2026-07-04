@@ -1221,14 +1221,14 @@ export default function EditableForm(props: EditableFormProps) {
 
   if (!state.isNewAsset && !state.asset) {
     return (
-      <DocumentTitle title={`${docTitle} | KoboToolbox`}>
+      <DocumentTitle title={`${docTitle} | DATAUMSA`}>
         <LoadingSpinner />
       </DocumentTitle>
     )
   }
 
   return (
-    <DocumentTitle title={`${docTitle} | KoboToolbox`}>
+    <DocumentTitle title={`${docTitle} | DATAUMSA`}>
       <>
         <div className='form-builder-wrapper'>
           {renderAside()}

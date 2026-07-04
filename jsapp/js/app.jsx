@@ -153,7 +153,7 @@ class App extends React.Component {
     // `pageWrapperModifiers`, or `show` properties, or JSX logic - we should
     // opt for a more sane, and singluar(!) solution.
     return (
-      <DocumentTitle title='KoboToolbox'>
+      <DocumentTitle title='DATAUMSA'>
         <QueryClientProvider client={queryClient}>
           <MantineProvider theme={themeKobo} cssVariablesResolver={cssVariablesResolverKobo}>
             <Notifications />
