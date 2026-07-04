@@ -6534,3 +6534,28 @@ msgstr "Habilitar botón de impresión en la boleta digital"
 msgid "Enable navigation menu in the digital form"
 msgstr "Habilitar menú de navegación en la boleta digital"
 
+#: jsapp/js/components/modals/welcomeModal.tsx:18
+msgid "Welcome to DATAUMSA!"
+msgstr "¡Te damos la bienvenida a DATAUMSA!"
+
+#: jsapp/js/components/modals/welcomeModal.tsx:23
+msgid "Discover all the tools and features we have prepared to help you manage your forms and collect data efficiently."
+msgstr "Descubre todas las herramientas y características que tenemos preparadas para ayudarte a gestionar tus formularios y recopilación de datos de manera eficiente."
+
+#: jsapp/js/components/modals/welcomeModal.tsx:27
+msgid "To learn more about how the platform works and see step-by-step user guides, we recommend checking our official documentation:"
+msgstr "Para aprender más sobre el funcionamiento de la plataforma y ver guías de uso paso a paso, te recomendamos revisar nuestra documentación oficial:"
+
+#: jsapp/js/components/modals/welcomeModal.tsx:31
+msgid "View Official Documentation"
+msgstr "Ver Documentación Oficial"
+
+#: jsapp/js/components/modals/welcomeModal.tsx:37
+msgid "Don't show this message again"
+msgstr "No volver a mostrar este mensaje"
+
+#: jsapp/js/components/modals/welcomeModal.tsx:42
+msgid "Start"
+msgstr "Empezar"
+
+

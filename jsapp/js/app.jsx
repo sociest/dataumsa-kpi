@@ -36,6 +36,7 @@ import { Tracking } from './router/useTracking'
 import { cssVariablesResolverKobo, themeKobo } from './theme'
 import { KOBO_MODAL_SHARED_PROPS } from './theme/kobo/Modal'
 import ToasterConfig from './toasterConfig'
+import WelcomeModal from '#/components/modals/welcomeModal'
 
 import './api/mutation-defaults'
 
@@ -161,6 +162,7 @@ class App extends React.Component {
               <RootContextProvider>
                 <Tracking />
                 <ToasterConfig />
+                <WelcomeModal />
 
                 <AppPageWrapper
                   shouldDisplayMain={this.shouldDisplayMainLayoutElements()}
