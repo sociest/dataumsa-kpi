@@ -587,7 +587,7 @@ msgstr "organización"
 msgid ""
 "Thanks for your upgrade! We appreciate your continued support. Reach out to "
 "billing@kobotoolbox.org if you have any questions about your plan."
-msgstr "¡Gracias por actualizar tu plan! Agradecemos tu continuo apoyo. Te puedes comunicar con billing@kobotoolbox.org si tienes alguna pregunta sobre tu plan."
+msgstr "¡Gracias por actualizar tu plan! Agradecemos tu continuo apoyo. Te puedes comunicar con soporte@data.umsa.bo si tienes alguna pregunta sobre tu plan."
 
 #: jsapp/js/account/plans/plan.component.tsx:203
 msgid ""
@@ -811,7 +811,7 @@ msgid ""
 "for single-sign on (SSO). Afterwards, you will only be able to sign in via "
 "SSO unless you disable this setting here. This will also update your email "
 "address in case your current address is different."
-msgstr "Conecte su cuenta de KoboToolbox con el proveedor de identidad de su organización para un inicio de sesión único (SSO). Después, solo podrá iniciar sesión a través de SSO, a menos que desactive esta configuración desde aquí. Esto también actualizará su dirección de correo electrónico, en caso de que su dirección actual sea diferente."
+msgstr "Conecte su cuenta de DataUMSA con el proveedor de identidad de su organización para un inicio de sesión único (SSO). Después, solo podrá iniciar sesión a través de SSO, a menos que desactive esta configuración desde aquí. Esto también actualizará su dirección de correo electrónico, en caso de que su dirección actual sea diferente."
 
 #: jsapp/js/account/security/sso/ssoSection.component.tsx:58
 msgid "Already connected"
@@ -1048,7 +1048,7 @@ msgstr "verifica tu conexión e intenta nuevamente."
 
 #: jsapp/js/actions.js:172 jsapp/js/actions.js:182
 msgid "if this problem persists, contact help@kobotoolbox.org"
-msgstr "si el problema persiste, comunícate con help@kobotoolbox.org"
+msgstr "si el problema persiste, comunícate con soporte@data.umsa.bo"
 
 #: jsapp/js/actions.js:180
 msgid "your form id was not valid:"
@@ -2212,7 +2212,7 @@ msgid ""
 "authenticator app fails. These codes are unique and will not be stored in "
 "your Kobo account. This is your only opportunity to save them. Please "
 "download the file and keep it somewhere safe."
-msgstr "Los siguientes códigos de recuperación le ayudarán a acceder a su cuenta, en caso de que su aplicación de autenticación falle. Estos códigos son únicos y no se guardarán en su cuenta de Kobo. Esta es su única oportunidad de guardarlos. Descargue el archivo y guárdelo en un lugar seguro."
+msgstr "Los siguientes códigos de recuperación le ayudarán a acceder a su cuenta, en caso de que su aplicación de autenticación falle. Estos códigos son únicos y no se guardarán en su cuenta de DataUMSA. Esta es su única oportunidad de guardarlos. Descargue el archivo y guárdelo en un lugar seguro."
 
 #: jsapp/js/components/bigModal/mfaModals.tsx:322
 msgid "Download codes"
@@ -4204,7 +4204,7 @@ msgstr "##permission_label## (##username_list## y ##hidden_username_count## otro
 msgid ""
 "The stored permissions are invalid. Please assign them again. If this "
 "problem persists, contact help@kobotoolbox.org"
-msgstr "Los permisos almacenados son inválidos. Por favor vuelve a asignarlos. Si el problema persiste, comunícate con help@kobotoolbox.org"
+msgstr "Los permisos almacenados son inválidos. Por favor vuelve a asignarlos. Si el problema persiste, comunícate con soporte@data.umsa.bo"
 
 #: jsapp/js/components/processing/SingleProcessingContent/TabAnalysis/AnalysisContent/AnalysisQuestionsList/AnalysisQuestionListItem/AnalysisQuestionEditor/SelectXFieldsEditor.tsx:76
 msgid "Type option name"
@@ -5263,7 +5263,7 @@ msgstr "En espera"
 
 #: jsapp/js/components/support/helpBubble.tsx:121
 msgid "KoboToolbox user"
-msgstr ""
+msgstr "usuario de DataUMSA"
 
 #: jsapp/js/components/support/helpBubble.tsx:151
 msgid "Help Resources"
@@ -5286,15 +5286,15 @@ msgstr "Foro de la comunidad"
 #: jsapp/js/components/support/helpBubble.tsx:175
 msgid ""
 "Connect with thousands of KoboToolbox users, ask questions, and share ideas."
-msgstr "Conéctate con miles de usuarios de KoboToolbox, haz preguntas y comparte ideas."
+msgstr "Conéctate con la comunidad de usuarios de DataUMSA, haz preguntas y comparte ideas."
 
 #: jsapp/js/components/support/helpBubble.tsx:187
 msgid "KoboToolbox Academy"
-msgstr "KoboToolbox Academy"
+msgstr "Documentación DataUMSA"
 
 #: jsapp/js/components/support/helpBubble.tsx:188
 msgid "Enroll in an online self-paced course designed by Kobo staff experts."
-msgstr "Inscríbete en un curso en línea a tu propio ritmo diseñado por expertos del personal de Kobo."
+msgstr "Aprende con las guías paso a paso diseñadas para la comunidad universitaria de DataUMSA."
 
 #: jsapp/js/components/support/helpBubble.tsx:192
 msgid "Notifications"
@@ -6409,7 +6409,7 @@ msgstr "No se pudo mostrar la fila:"
 msgid ""
 "This question could not be imported. Please re-create it manually. Please "
 "contact us at help@kobotoolbox.org so we can fix this bug!"
-msgstr "No se pudo importar esta pregunta. Puedes volver a crearla manualmente. Por favor comunícate con nosotros en help@kobotoolbox.org para que podamos corregir este error."
+msgstr "No se pudo importar esta pregunta. Puedes volver a crearla manualmente. Por favor comunícate con nosotros en soporte@data.umsa.bo para que podamos corregir este error."
 
 #: jsapp/xlform/src/view.rowDetail.SkipLogic.coffee:25
 msgid "This question will only be displayed if the following conditions apply"

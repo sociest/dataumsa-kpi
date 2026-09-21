@@ -225,13 +225,13 @@ CONSTANCE_CONFIG = {
         'in the user interface',
     ),
     'SUPPORT_EMAIL': (
-        env.str('KOBO_SUPPORT_EMAIL', env.str('DEFAULT_FROM_EMAIL', 'help@kobotoolbox.org')),
+        env.str('KOBO_SUPPORT_EMAIL', env.str('DEFAULT_FROM_EMAIL', 'soporte@data.umsa.bo')),
         'Email address for users to contact, e.g. when they encounter '
         'unhandled errors in the application',
     ),
     'SUPPORT_URL': (
-        env.str('KOBO_SUPPORT_URL', 'https://support.kobotoolbox.org/'),
-        'URL for "KoboToolbox Help Center"',
+        env.str('KOBO_SUPPORT_URL', 'https://data.umsa.bo/docs/'),
+        'URL for "DataUMSA Help Center"',
     ),
     'TURNSTILE_ENABLED': (
         env.bool('TURNSTILE_ENABLED', False),
@@ -246,14 +246,14 @@ CONSTANCE_CONFIG = {
         'Cloudflare Turnstile secret key',
     ),
     'ACADEMY_URL': (
-        env.str('KOBO_ACADEMY_URL', 'https://academy.kobotoolbox.org/'),
-        'URL for "KoboToolbox Community Forum"',
+        env.str('KOBO_ACADEMY_URL', 'https://data.umsa.bo/docs/guides/inicio-rapido/'),
+        'URL for "DataUMSA Learning Center"',
     ),
     'COMMUNITY_URL': (
         env.str(
-            'KOBO_COMMUNITY_URL', 'https://community.kobotoolbox.org/'
+            'KOBO_COMMUNITY_URL', 'https://data.umsa.bo/docs/'
         ),
-        'URL for "KoboToolbox Community Forum"',
+        'URL for "DataUMSA Community / Help"',
     ),
     'SYNCHRONOUS_EXPORT_CACHE_MAX_AGE': (
         300,

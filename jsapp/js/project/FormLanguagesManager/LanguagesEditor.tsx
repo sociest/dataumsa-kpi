@@ -8,11 +8,11 @@ import InlineMessage from '#/components/common/inlineMessage'
 import { LockingRestrictionName } from '#/components/locking/lockingConstants'
 import { hasAssetRestriction } from '#/components/locking/lockingUtils'
 import type { AssetResponse } from '#/dataInterface'
+import { DOCS_PATHS, getDocUrl } from '#/docsUrls'
 import envStore from '#/envStore'
 import type { LangObject } from '#/utils'
 import LanguageForm from './LanguageForm'
 
-const LANGUAGE_SUPPORT_URL = 'language_dashboard.html'
 
 interface LanguagesEditorProps {
   asset: AssetResponse
@@ -64,7 +64,7 @@ export default function LanguagesEditor(props: LanguagesEditorProps) {
               </Box>
               <ButtonNew
                 component='a'
-                href='https://data.umsa.bo/docs/guides/configuracion-idiomas/'
+                href={getDocUrl(DOCS_PATHS.CONFIGURACION_IDIOMAS)}
                 target='_blank'
                 variant='light'
                 size='xs'
@@ -126,7 +126,7 @@ export default function LanguagesEditor(props: LanguagesEditorProps) {
               </Box>
               <ButtonNew
                 component='a'
-                href='https://data.umsa.bo/docs/guides/configuracion-idiomas/'
+                href={getDocUrl(DOCS_PATHS.CONFIGURACION_IDIOMAS)}
                 target='_blank'
                 variant='light'
                 size='xs'
