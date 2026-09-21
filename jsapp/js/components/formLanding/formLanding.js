@@ -279,10 +279,6 @@ class FormLanding extends React.Component {
     const chosenMethod = this.state.selectedCollectMethod
     const chosenMethodLink = this.state.deployment__links[chosenMethod] || null
 
-    var kc_server = document.createElement('a')
-    kc_server.href = envStore.data.open_rosa_server
-    var kobocollect_url = kc_server.origin
-
     return (
       <bem.FormView__row>
         <bem.FormView__cell m={['label', 'first']}>{t('Collect data')}</bem.FormView__cell>
@@ -310,22 +306,17 @@ class FormLanding extends React.Component {
             {chosenMethod === COLLECTION_METHODS.android.id && (
               <ol>
                 <li>
-                  {t('Install')}
+                  {t('Install DataUMSA Collect on your Android device from:')}
                   &nbsp;
                   <a
-                    href='https://play.google.com/store/apps/details?id=org.koboc.collect.android&hl=en'
+                    href={COLLECTION_METHODS.android.url}
                     target='_blank'
                   >
-                    KoboCollect
+                    https://dataumsa.sociest.org/app-movil/descargas/
                   </a>
-                  &nbsp;
-                  {t('on your Android device.')}
                 </li>
-                <li>{t('Select the option "Manually enter project details"')}</li>
                 <li>
-                  {t('Enter the server URL')}&nbsp;
-                  <code>{kobocollect_url}</code>&nbsp;
-                  {t('and your username and password')}
+                  {t('Enter your project credentials to connect, as the URL is automatically configured within the DataUMSA Collect app.')}
                 </li>
                 <li>{t('Select "Download form" and select this project')}</li>
                 <li>{t('Select "Start New Form"')}</li>
@@ -390,7 +381,7 @@ class FormLanding extends React.Component {
           onClick={() => {
             window.open(COLLECTION_METHODS.android.url, '_blank')
           }}
-          label={t('Download KoboCollect')}
+          label={t('Download DataUMSA Collect')}
         />
       )
     }
@@ -469,6 +460,15 @@ class FormLanding extends React.Component {
     }
     this.goToProjectsList()
   }
+  handleEditClick(evt) {
+    evt.preventDefault()
+    const warningMessage = t(
+      'Warning: If this form was originally created using advanced XLSForm features, editing it in the Form Builder could result in the loss of some special configurations or data.\n\nDo you want to continue to the Form Builder?'
+    )
+    if (window.confirm(warningMessage)) {
+      this.props.router.navigate(ROUTES.FORM_EDIT.replace(':uid', this.state.uid))
+    }
+  }
   renderButtons(userCanEdit) {
     var downloads = []
     if (this.state.downloads) {
@@ -480,13 +480,14 @@ class FormLanding extends React.Component {
     return (
       <React.Fragment>
         {userCanEdit ? (
-          <Link to={`/forms/${this.state.uid}/edit`}>
-            {/*
-              We put non clickable button inside Link, so that it's possible
-              to open it in new tab.
-            */}
-            <Button type='text' size='m' startIcon='edit' tooltip={t('Edit in Form Builder')} tooltipPosition='right' />
-          </Link>
+          <Button
+            type='text'
+            size='m'
+            startIcon='edit'
+            tooltip={t('Edit in Form Builder')}
+            tooltipPosition='right'
+            onClick={this.handleEditClick.bind(this)}
+          />
         ) : (
           <Button
             type='text'

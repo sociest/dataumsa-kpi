@@ -90,9 +90,9 @@
       {{ form.login }}
       <label for="{{ form.login.id_for_label }}">
         {% if LANGUAGE_CODE == 'es' %}
-          Usuario o correo electrónico
+          Ingrese su username
         {% else %}
-          Username or e-mail
+          Enter your username
         {% endif %}
       </label>
       {% if form.login.errors %}

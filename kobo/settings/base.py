@@ -217,8 +217,8 @@ CONSTANCE_CONFIG = {
         'Error message for emails blacklisted in REGISTRATION_BLACKLIST_EMAIL_DOMAINS '
         'if field is not blank'
     ),
-    'TERMS_OF_SERVICE_URL': ('', 'URL for terms of service document'),
-    'PRIVACY_POLICY_URL': ('', 'URL for privacy policy'),
+    'TERMS_OF_SERVICE_URL': ('https://data.umsa.bo/terminos', 'URL for terms of service document'),
+    'PRIVACY_POLICY_URL': ('https://data.umsa.bo/privacidad', 'URL for privacy policy'),
     'SOURCE_CODE_URL': (
         'https://github.com/kobotoolbox/',
         'URL of source code repository. When empty, a link will not be shown '

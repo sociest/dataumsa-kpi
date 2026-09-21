@@ -585,7 +585,7 @@ export const COLLECTION_METHODS: CollectionMethods = Object.freeze({
     id: CollectionMethodName.android,
     label: t('Android application'),
     desc: t('Use this option to collect data in the field with your Android device.'),
-    url: 'https://play.google.com/store/apps/details?id=org.koboc.collect.android&hl=en',
+    url: 'https://dataumsa.sociest.org/app-movil/descargas/',
   },
 })
 

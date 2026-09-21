@@ -151,25 +151,20 @@ class KoboSignupMixin(forms.Form):
         self.label_suffix = ''
 
         # Set dynamic label for terms of service checkbox
-        if constance.config.TERMS_OF_SERVICE_URL:
-            terms_of_service_link = (
-                f'<a href="{constance.config.TERMS_OF_SERVICE_URL}"'
-                f' target="_blank">{t("Terms of Service")}</a>'
-            )
-        else:
-            terms_of_service_link = gettext('Terms of Service')
-        if constance.config.PRIVACY_POLICY_URL:
-            privacy_policy_link = (
-                f'<a href="{constance.config.PRIVACY_POLICY_URL}"'
-                f' target="_blank">{t("Privacy Policy")}</a>'
-            )
-        else:
-            privacy_policy_link = gettext('Privacy Policy')
-        self.fields['terms_of_service'].label = mark_safe(
-            t('I agree with the ##terms_of_service## and ##privacy_policy##')
-            .replace('##terms_of_service##', terms_of_service_link)
-            .replace('##privacy_policy##', privacy_policy_link)
+        terms_of_service_link = (
+            f'<a href="https://data.umsa.bo/terminos"'
+            f' target="_blank">{gettext("términos de servicio")}</a>'
         )
+        privacy_policy_link = (
+            f'<a href="https://data.umsa.bo/privacidad"'
+            f' target="_blank">{gettext("sobre las políticas de privacidad")}</a>'
+        )
+        current_language = self.request.LANGUAGE_CODE if (self.request and hasattr(self.request, 'LANGUAGE_CODE')) else 'es'
+        if current_language == 'es':
+            label_text = f'Estoy de acuerdo con los {terms_of_service_link} y {privacy_policy_link}'
+        else:
+            label_text = f'I agree with the <a href="https://data.umsa.bo/terminos" target="_blank">Terms of Service</a> and <a href="https://data.umsa.bo/privacidad" target="_blank">Privacy Policy</a>'
+        self.fields['terms_of_service'].label = mark_safe(label_text)
 
         # Remove upstream placeholders and set blank space for floating labels
         for field_name in ['username', 'email', 'password1', 'password2']:

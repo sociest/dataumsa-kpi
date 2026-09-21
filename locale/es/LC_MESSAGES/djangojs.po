@@ -2579,15 +2579,16 @@ msgstr "Versión"
 
 #: jsapp/js/components/formLanding/FormHistory.tsx:132
 msgid "currently deployed"
-msgstr ""
+msgstr "desplegado actualmente"
 
 #: jsapp/js/components/formLanding/FormHistory.tsx:145
 msgid "Form change"
-msgstr ""
+msgstr "Cambio en el formulario"
 
 #: jsapp/js/components/formLanding/FormHistory.tsx:147
 msgid "Deployment"
-msgstr ""
+msgstr "Despliegue"
+
 
 #: jsapp/js/components/formLanding/FormHistory.tsx:165
 msgid "Clone this version as a new project"
@@ -6557,5 +6558,168 @@ msgstr "No volver a mostrar este mensaje"
 #: jsapp/js/components/modals/welcomeModal.tsx:42
 msgid "Start"
 msgstr "Empezar"
+
+#: jsapp/js/components/formLanding/formLanding.js:312
+msgid "Install DataUMSA Collect on your Android device from:"
+msgstr "Instala la de DataUMSA Collect en tu dispositivo android con redirccionamiento aca:"
+
+#: jsapp/js/components/formLanding/formLanding.js:321
+msgid "Enter your project credentials to connect, as the URL is automatically configured within the DataUMSA Collect app."
+msgstr "Coloca las credenciales del proyecto para conectarte, ya que la URL se configurará automáticamente dentro de la aplicación DataUMSA Collect."
+
+#: jsapp/js/components/formLanding/formLanding.js:391
+msgid "Download DataUMSA Collect"
+msgstr "Descargar DataUMSA Collect"
+
+#: jsapp/js/components/formLanding/formLanding.js:613
+msgid "Current version"
+msgstr "Versión actual"
+
+#: jsapp/js/components/formLanding/formLanding.js:615
+msgid "Archived version"
+msgstr "Versión archivada"
+
+#: jsapp/js/components/formLanding/formLanding.js:616
+msgid "Draft version"
+msgstr "Versión en borrador"
+
+#: jsapp/js/components/formLanding/formLanding.js:569
+msgid "Languages:"
+msgstr "Idiomas:"
+
+#: jsapp/js/components/formLanding/formLanding.js:162
+msgid "questions"
+msgstr "preguntas"
+
+#: jsapp/js/components/formLanding/formLanding.js:284
+msgid "Collect data"
+msgstr "Recopilar datos"
+
+#: jsapp/js/components/formLanding/formLanding.js:410
+msgid "Copy"
+msgstr "Copiar"
+
+#: jsapp/js/components/formLanding/formLanding.js:261
+msgid "Show full history"
+msgstr "Mostrar historial completo"
+
+#: jsapp/js/components/formLanding/formLanding.js:261
+msgid "Hide full history"
+msgstr "Ocultar historial completo"
+
+#: jsapp/js/project/FormLanguagesManager/LanguagesEditor.tsx:59
+msgid "Language Configuration Guide"
+msgstr "Guía de configuración de idiomas"
+
+#: jsapp/js/project/FormLanguagesManager/LanguagesEditor.tsx:62
+msgid "Learn how to configure languages and translations for your forms in our documentation."
+msgstr "Aprende cómo configurar idiomas y traducciones para tus formularios en nuestra documentación."
+
+#: jsapp/js/project/FormLanguagesManager/LanguagesEditor.tsx:124
+msgid "Learn how to manage multiple languages and translate your form content in our documentation."
+msgstr "Aprende cómo gestionar múltiples idiomas y traducir el contenido de tu formulario en nuestra documentación."
+
+#: jsapp/js/project/FormLanguagesManager/LanguagesEditor.tsx:81
+msgid "View Guide"
+msgstr "Ver guía"
+
+#: jsapp/js/project/FormLanguagesManager/LanguagesEditor.tsx:267
+msgid "Add language"
+msgstr "Agregar idioma"
+
+#: jsapp/js/project/FormLanguagesManager/LanguagesEditor.tsx:274
+msgid "Add a new language"
+msgstr "Agregar un nuevo idioma"
+
+#: jsapp/js/components/formBuilder/formBuilderUtils.ts:142
+msgid "There is an unnamed translation in your form definition.\nPlease give a name to all translations in your form.\nUse \"Manage Translations\" option from form landing page."
+msgstr "Hay una traducción sin nombre en la definición de su formulario.\nPor favor, asigne un nombre a todas las traducciones de su formulario.\nUse la opción \"Gestionar idiomas\" en la página de inicio del formulario."
+
+#: jsapp/xlform/src/model.configs.coffee:20
+msgid "start time"
+msgstr "hora de inicio"
+
+#: jsapp/xlform/src/model.configs.coffee:25
+msgid "end time"
+msgstr "hora de finalización"
+
+#: jsapp/xlform/src/model.configs.coffee:30
+msgid "start geopoint early"
+msgstr "iniciar punto geográfico anticipadamente"
+
+#: jsapp/xlform/src/model.configs.coffee:35
+msgid "today"
+msgstr "hoy"
+
+
+#: jsapp/xlform/src/model.configs.coffee:57
+msgid "device id"
+msgstr "identificación del dispositivo"
+
+#: jsapp/xlform/src/model.configs.coffee:63
+msgid "phone number"
+msgstr "número de teléfono"
+
+#: jsapp/xlform/src/model.configs.coffee:68
+msgid "audit"
+msgstr "auditoría"
+
+#: jsapp/js/components/metadataEditor.js:236
+msgid "Enable audio recording in the background"
+msgstr "Habilitar la grabación de audio en segundo plano"
+
+#: jsapp/js/components/metadataEditor.js:235
+msgid "This survey will be recorded"
+msgstr "Esta encuesta será grabada"
+
+#: jsapp/js/components/metadataEditor.js:246
+msgid "Audio quality"
+msgstr "Calidad de audio"
+
+#: jsapp/js/editorMixins/AssetNavigator.tsx:155
+msgid "Filter by tags"
+msgstr "Filtrar por etiquetas"
+
+#: jsapp/js/editorMixins/AssetNavigator.tsx:158
+msgid "No tags found"
+msgstr "No se encontraron etiquetas"
+
+#: jsapp/js/editorMixins/AssetNavigator.tsx:169
+msgid "Select collection"
+msgstr "Seleccionar colección"
+
+#: jsapp/js/editorMixins/AssetNavigator.tsx:179
+msgid "##count## assets found"
+msgstr "##count## recursos encontrados"
+
+#: jsapp/js/editorMixins/AssetNavigator.tsx:183
+msgid "Expand details"
+msgstr "Expandir detalles"
+
+#: jsapp/js/editorMixins/AssetNavigator.tsx:198
+msgid "Error loading assets"
+msgstr "Error al cargar recursos"
+
+#: jsapp/js/editorMixins/AssetNavigator.tsx:203
+msgid "No assets found"
+msgstr "No se encontraron recursos"
+
+#: jsapp/js/editorMixins/AssetNavigatorCard.tsx:44
+msgid "Block of ##count## questions"
+msgstr "Bloque de ##count## preguntas"
+
+#: jsapp/js/editorMixins/EditableForm.tsx:1269
+msgid "Import Cascading Select Questions"
+msgstr "Importar preguntas de selección en cascada"
+
+#: jsapp/js/components/formLanding/formLanding.js:239
+msgid "Form history"
+msgstr "Historial del formulario"
+
+#: jsapp/js/components/formLanding/formLanding.js:462
+msgid "Warning: If this form was originally created using advanced XLSForm features, editing it in the Form Builder could result in the loss of some special configurations or data.\n\nDo you want to continue to the Form Builder?"
+msgstr "Advertencia: Si este formulario fue creado originalmente usando características avanzadas de XLSForm, realizar ediciones en el Form Builder podría provocar la pérdida de algunas configuraciones especiales o datos.\n\n¿Desea continuar al Form Builder?"
+
+
 
 
